@@ -18,12 +18,12 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from publisher.views import TemperaturePublisher
+
 from subscriber.views import TemperatureSubscriber
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('publish-temperature/', TemperaturePublisher.as_view(), name='publish_temperature'),
+  
     path('get-temperature/', TemperatureSubscriber.as_view(), name='get_temperature'),
    
 ]
